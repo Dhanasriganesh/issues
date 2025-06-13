@@ -84,7 +84,7 @@ const ClientHead = () => {
             label="Filter by Status"
             onChange={(e) => setFilter(e.target.value)}
           >
-            <MenuItem value="all">All Tickets</MenuItem>
+            <MenuItem value="all">All Ticketsz</MenuItem>
             <MenuItem value="open">Open</MenuItem>
             <MenuItem value="in-progress">In Progress</MenuItem>
             <MenuItem value="resolved">Resolved</MenuItem>
