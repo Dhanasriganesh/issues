@@ -1,17 +1,25 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   // Replace with your Firebase config
-  apiKey: "AIzaSyA5atsWG-tRpSJLMHSqiVUG5let0sb87Uo",
+  apiKey: "AIzaSyDxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx",
   authDomain: "ticketing-9965a.firebaseapp.com",
   projectId: "ticketing-9965a",
-  storageBucket: "ticketing-9965a.firebasestorage.app",
-  messagingSenderId: "751610285833",
-  appId: "1:751610285833:web:2bb70e7b22577eb5760dd8"
+  storageBucket: "ticketing-9965a.appspot.com",
+  messagingSenderId: "123456789012",
+  appId: "1:123456789012:web:abcdef1234567890",
+  measurementId: "G-XXXXXXXXXX"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app); 
+
+// Initialize Firebase services
+const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
+
+export { auth, db, storage }; 
