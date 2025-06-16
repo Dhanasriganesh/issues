@@ -6,9 +6,10 @@ import Client from '../pages/Client'
 import ClientHead from '../pages/ClientHead'
 import Employee from '../pages/Employee'
 import ProjectManager from '../pages/ProjectManager'
-
-function Routers() {
-    return (
+function Routers() 
+{
+    return 
+    (
         <Routes>
             <Route path='/' element={<Login />} />
             <Route path='/admin' element={<Admin />} />
@@ -19,5 +20,4 @@ function Routers() {
         </Routes>
     )
 }
-
 export default Routers

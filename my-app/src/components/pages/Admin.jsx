@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import DashboardLayout from '../layouts/DashboardLayout';
 import {
-  Container,
   Box,
   Typography,
   Paper,
@@ -96,7 +96,6 @@ const Admin = () => {
         createdAt: new Date().toISOString()
       };
 
-      // Use setDoc instead of updateDoc for creating new documents
       await setDoc(doc(db, 'users', userCredential.user.uid), userData);
 
       setSuccess('User created successfully');
@@ -194,35 +193,29 @@ const Admin = () => {
   };
 
   return (
-    <Container>
-      <Box sx={{ mt: 4, mb: 4 }}>
+    <DashboardLayout title="Admin Dashboard">
+      <Box>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
           <Typography variant="h4" component="h1">
-            Admin Dashboard
+            User Management
           </Typography>
-          <Box>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => {
-                setEditMode(false);
-                setSelectedUser(null);
-                setFormData({
-                  email: '',
-                  password: '',
-                  name: '',
-                  role: 'employee'
-                });
-                setOpen(true);
-              }}
-              sx={{ mr: 2 }}
-            >
-              Create User
-            </Button>
-            <Button variant="outlined" color="secondary" onClick={handleLogout}>
-              Logout
-            </Button>
-          </Box>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              setEditMode(false);
+              setSelectedUser(null);
+              setFormData({
+                email: '',
+                password: '',
+                name: '',
+                role: 'employee'
+              });
+              setOpen(true);
+            }}
+          >
+            Create User
+          </Button>
         </Box>
 
         {error && (
@@ -334,7 +327,7 @@ const Admin = () => {
           </DialogActions>
         </Dialog>
       </Box>
-    </Container>
+    </DashboardLayout>
   );
 };
 

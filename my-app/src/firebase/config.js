@@ -4,14 +4,12 @@ import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  // Replace with your Firebase config
-  apiKey: "AIzaSyDxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx",
+  apiKey: "AIzaSyA5atsWG-tRpSJLMHSqiVUG5let0sb87Uo",
   authDomain: "ticketing-9965a.firebaseapp.com",
   projectId: "ticketing-9965a",
   storageBucket: "ticketing-9965a.appspot.com",
-  messagingSenderId: "123456789012",
-  appId: "1:123456789012:web:abcdef1234567890",
-  measurementId: "G-XXXXXXXXXX"
+  messagingSenderId: "751610285833",
+  appId: "1:751610285833:web:2bb70e7b22577eb5760dd8"
 };
 
 // Initialize Firebase
