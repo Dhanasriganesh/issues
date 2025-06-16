@@ -1,29 +1,9 @@
-import { AuthProvider } from './context/AuthContext';
-import AppRouter from './components/routers/AppRouter';
-import { ThemeProvider, createTheme } from '@mui/material';
-import CssBaseline from '@mui/material/CssBaseline';
-
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-  },
-});
-
+import React from 'react'
+import { Layout } from 'lucide-react'
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <AuthProvider>
-        <AppRouter />
-      </AuthProvider>
-    </ThemeProvider>
-  );
+    <Layout/>
+  )
 }
 
-export default App;
+export default App
